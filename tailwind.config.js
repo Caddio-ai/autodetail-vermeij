@@ -50,13 +50,20 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Custom brand colors - Premium automotive styling
-        charcoal: "#0A0A0A",
-        metallic: "#1A1A1A", 
-        gold: "#D4AF37",
-        darkGold: "#B8860B",
-        silver: "#C0C0C0",
-        darkSilver: "#808080",
+        // Premium luxury automotive color palette
+        primary: '#0A84FF',
+        'primary-hover': '#0066CC',
+        background: {
+          dark: '#111315',
+          light: '#F8F9FA',
+        },
+        surface: '#1C1E21',
+        text: {
+          primary: '#E5E5E5',
+          secondary: '#B0B3B8',
+        },
+        accent: '#B5FF3B',
+        destructive: '#FF4D4F',
       },
       borderRadius: {
         lg: "var(--radius)",

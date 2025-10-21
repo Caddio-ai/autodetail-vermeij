@@ -61,14 +61,20 @@
 }
 
 @layer components {
+  /* Premium Button Styles */
   .btn-primary {
-    @apply bg-gold text-charcoal px-8 py-4 rounded-lg font-semibold hover:bg-darkGold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
+    @apply bg-primary hover:bg-primary-hover text-white rounded-xl px-6 py-3 shadow-lg transition-all duration-300 font-semibold uppercase tracking-wide;
   }
   
   .btn-secondary {
-    @apply bg-transparent border-2 border-gold text-gold px-8 py-4 rounded-lg font-semibold hover:bg-gold hover:text-charcoal transition-all duration-300 transform hover:scale-105;
+    @apply border border-white/20 text-white hover:bg-white/10 rounded-xl px-6 py-3 transition-all duration-300 font-semibold uppercase tracking-wide;
   }
   
+  .btn-accent {
+    @apply bg-accent text-black hover:bg-lime-400 rounded-xl px-6 py-3 transition-all duration-300 font-semibold uppercase tracking-wide;
+  }
+  
+  /* Layout Utilities */
   .section-padding {
     @apply px-4 sm:px-6 lg:px-8;
   }
@@ -77,23 +83,44 @@
     @apply max-w-7xl mx-auto;
   }
   
+  /* Premium Backgrounds */
   .gradient-bg {
-    @apply bg-gradient-to-br from-charcoal via-metallic to-charcoal;
+    @apply bg-gradient-to-tr from-background-dark to-surface;
   }
   
-  .text-gradient {
-    @apply bg-gradient-to-r from-gold to-silver bg-clip-text text-transparent;
+  .gradient-primary {
+    @apply bg-gradient-to-r from-primary to-[#66B2FF];
   }
   
+  /* Premium Cards */
   .premium-card {
-    @apply bg-metallic/80 backdrop-blur-sm border border-gold/20 rounded-2xl shadow-2xl hover:shadow-gold/20 transition-all duration-300;
+    @apply bg-surface shadow-lg rounded-2xl p-6 border border-white/10;
+  }
+  
+  /* Typography */
+  .premium-heading {
+    @apply text-3xl md:text-4xl font-semibold text-white tracking-tight;
   }
   
   .premium-text {
-    @apply text-silver;
+    @apply text-text-secondary leading-relaxed;
   }
   
-  .premium-heading {
-    @apply text-white font-bold;
+  .premium-body {
+    @apply text-text-primary leading-relaxed;
+  }
+  
+  /* Text Gradients */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-[#66B2FF] bg-clip-text text-transparent;
+  }
+  
+  /* Navigation */
+  .nav-link {
+    @apply text-text-secondary hover:text-primary transition-colors duration-300;
+  }
+  
+  .nav-link-active {
+    @apply text-primary border-b-2 border-primary;
   }
 }

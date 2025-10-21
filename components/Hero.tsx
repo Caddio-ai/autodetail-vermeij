@@ -29,7 +29,7 @@ export function Hero() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center space-x-2 bg-gold/20 text-gold px-6 py-3 rounded-full text-sm font-medium mb-6 border border-gold/30"
+              className="inline-flex items-center space-x-2 bg-primary/20 text-primary px-6 py-3 rounded-full text-sm font-medium mb-6 border border-primary/30"
             >
               <Star className="h-4 w-4" />
               <span>Premium Autodetailing</span>
@@ -39,7 +39,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold premium-heading mb-6 leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight tracking-tight"
             >
               Uw auto verdient de{' '}
               <span className="text-gradient">beste zorg</span>
@@ -49,7 +49,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-lg md:text-xl premium-text mb-8 max-w-2xl"
+              className="text-lg md:text-xl text-text-secondary mb-8 max-w-2xl leading-relaxed"
             >
               Professionele autodetailing in Regio Gouda/Reeuwijk. 
               Lakcorrectie, keramische coating en premium interieur/exterieur behandeling.
@@ -82,8 +82,8 @@ export function Hero() {
             className="relative"
           >
             <div className="relative premium-card p-8">
-              <div className="aspect-[4/3] bg-gradient-to-br from-metallic to-charcoal rounded-xl flex items-center justify-center border border-gold/20">
-                <Car className="h-32 w-32 text-gold/40" />
+              <div className="aspect-[4/3] bg-gradient-to-br from-surface to-background-dark rounded-xl flex items-center justify-center border border-white/10">
+                <Car className="h-32 w-32 text-primary/40" />
               </div>
               
               {/* Premium Floating Cards */}
@@ -93,12 +93,12 @@ export function Hero() {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className="absolute -top-4 -left-4 premium-card p-4 flex items-center space-x-3"
               >
-                <div className="p-2 bg-gold/20 rounded-lg border border-gold/30">
-                  <Shield className="h-5 w-5 text-gold" />
+                <div className="p-2 bg-primary/20 rounded-lg border border-primary/30">
+                  <Shield className="h-5 w-5 text-primary" />
                 </div>
                 <div>
-                  <div className="text-sm font-medium premium-heading">Premium Kwaliteit</div>
-                  <div className="text-xs premium-text">5 jaar garantie</div>
+                  <div className="text-sm font-medium text-white">Premium Kwaliteit</div>
+                  <div className="text-xs text-text-secondary">5 jaar garantie</div>
                 </div>
               </motion.div>
               
@@ -108,12 +108,12 @@ export function Hero() {
                 transition={{ duration: 0.6, delay: 1.0 }}
                 className="absolute -bottom-4 -right-4 premium-card p-4 flex items-center space-x-3"
               >
-                <div className="p-2 bg-gold/20 rounded-lg border border-gold/30">
-                  <Clock className="h-5 w-5 text-gold" />
+                <div className="p-2 bg-accent/20 rounded-lg border border-accent/30">
+                  <Clock className="h-5 w-5 text-accent" />
                 </div>
                 <div>
-                  <div className="text-sm font-medium premium-heading">Snelle Service</div>
-                  <div className="text-xs premium-text">2-8 uur</div>
+                  <div className="text-sm font-medium text-white">Snelle Service</div>
+                  <div className="text-xs text-text-secondary">2-8 uur</div>
                 </div>
               </motion.div>
             </div>
