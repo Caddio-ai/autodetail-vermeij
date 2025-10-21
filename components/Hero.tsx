@@ -1,0 +1,120 @@
+'use client'
+
+import { motion } from 'framer-motion'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
+import { Car, Star, Shield, Clock } from 'lucide-react'
+
+export function Hero() {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-gray-50 to-gray-100 overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23f3f4f6" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50" />
+      
+      <div className="relative z-10 container-max section-padding">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center lg:text-left"
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="inline-flex items-center space-x-2 bg-blue/10 text-blue px-4 py-2 rounded-full text-sm font-medium mb-6"
+            >
+              <Star className="h-4 w-4" />
+              <span>Premium Autodetailing</span>
+            </motion.div>
+            
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-charcoal mb-6 leading-tight"
+            >
+              Uw auto verdient de{' '}
+              <span className="text-gradient">beste zorg</span>
+            </motion.h1>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl"
+            >
+              Professionele autodetailing in Regio Gouda/Reeuwijk. 
+              Lakcorrectie, keramische coating en premium interieur/exterieur behandeling.
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            >
+              <Button asChild size="lg" className="btn-primary text-lg px-8 py-4">
+                <Link href="/contact">
+                  Gratis offerte aanvragen
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-4">
+                <Link href="/portfolio">
+                  Bekijk portfolio
+                </Link>
+              </Button>
+            </motion.div>
+          </motion.div>
+          
+          {/* Image/Visual */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="relative"
+          >
+            <div className="relative bg-white rounded-2xl shadow-2xl p-8">
+              <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center">
+                <Car className="h-32 w-32 text-blue/20" />
+              </div>
+              
+              {/* Floating Cards */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                className="absolute -top-4 -left-4 bg-white rounded-xl shadow-lg p-4 flex items-center space-x-3"
+              >
+                <div className="p-2 bg-green-100 rounded-lg">
+                  <Shield className="h-5 w-5 text-green-600" />
+                </div>
+                <div>
+                  <div className="text-sm font-medium text-gray-900">Premium Kwaliteit</div>
+                  <div className="text-xs text-gray-500">5 jaar garantie</div>
+                </div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 1.0 }}
+                className="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-lg p-4 flex items-center space-x-3"
+              >
+                <div className="p-2 bg-blue-100 rounded-lg">
+                  <Clock className="h-5 w-5 text-blue-600" />
+                </div>
+                <div>
+                  <div className="text-sm font-medium text-gray-900">Snelle Service</div>
+                  <div className="text-xs text-gray-500">2-8 uur</div>
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  )
+}
