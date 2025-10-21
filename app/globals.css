@@ -89,7 +89,7 @@
   }
   
   .gradient-primary {
-    @apply bg-gradient-to-r from-primary to-[#66B2FF];
+    @apply bg-gradient-to-r from-primary to-[#0A84FF];
   }
   
   /* Premium Cards */
@@ -112,7 +112,7 @@
   
   /* Text Gradients */
   .text-gradient {
-    @apply bg-gradient-to-r from-primary to-[#66B2FF] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary to-[#0A84FF] bg-clip-text text-transparent;
   }
   
   /* Navigation */

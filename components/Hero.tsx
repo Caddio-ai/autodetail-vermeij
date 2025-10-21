@@ -14,7 +14,7 @@ export function Hero() {
       </div>
       
       {/* Dark Overlay for Text Readability */}
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/60" />
       
       <div className="relative z-10 container-max section-padding">
         <div className="flex items-center justify-center min-h-screen">
@@ -39,7 +39,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed"
+              className="text-lg md:text-xl text-white mb-8 max-w-3xl mx-auto leading-relaxed"
             >
               Professionele autodetailing in Regio Gouda/Reeuwijk. 
               Lakcorrectie, keramische coating en premium interieur/exterieur behandeling.
