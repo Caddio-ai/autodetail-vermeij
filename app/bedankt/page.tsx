@@ -1,5 +1,4 @@
 import { generateMetadata } from '@/lib/seo'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { CheckCircle, Phone, Mail, Clock } from 'lucide-react'
@@ -13,47 +12,22 @@ export default function BedanktPage() {
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-gray-50 to-gray-100">
       <div className="container-max section-padding">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-2xl mx-auto text-center"
-        >
+        <div className="max-w-2xl mx-auto text-center">
           <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12">
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-full mb-8"
-            >
+            <div className="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-full mb-8">
               <CheckCircle className="h-12 w-12 text-green-600" />
-            </motion.div>
+            </div>
             
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-3xl md:text-4xl font-heading font-bold text-charcoal mb-6"
-            >
+            <h1 className="text-3xl md:text-4xl font-heading font-bold text-charcoal mb-6">
               Bedankt voor uw aanvraag!
-            </motion.h1>
+            </h1>
             
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-lg text-gray-600 mb-8"
-            >
+            <p className="text-lg text-gray-600 mb-8">
               Uw offerte aanvraag is succesvol verzonden. Wij nemen binnen 24 uur 
               contact met u op om uw wensen door te spreken en een passende offerte te maken.
-            </motion.p>
+            </p>
             
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="bg-gray-50 rounded-xl p-6 mb-8"
-            >
+            <div className="bg-gray-50 rounded-xl p-6 mb-8">
               <h3 className="font-heading font-semibold text-charcoal mb-4">
                 Wat gebeurt er nu?
               </h3>
@@ -77,14 +51,9 @@ export default function BedanktPage() {
                   <span className="text-gray-700">Wij maken een passende offerte</span>
                 </div>
               </div>
-            </motion.div>
+            </div>
             
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="space-y-4"
-            >
+            <div className="space-y-4">
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" className="btn-primary">
                   <Link href="/">
@@ -119,9 +88,9 @@ export default function BedanktPage() {
                   </a>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
