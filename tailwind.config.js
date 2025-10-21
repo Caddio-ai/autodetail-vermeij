@@ -54,6 +54,7 @@ module.exports = {
         primary: '#0A84FF',
         'primary-hover': '#0066CC',
         background: {
+          DEFAULT: '#F8F9FA',
           dark: '#111315',
           light: '#F8F9FA',
         },
