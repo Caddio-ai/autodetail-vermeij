@@ -93,7 +93,7 @@ export function ReviewsSection() {
               </div>
               
               <p className="text-gray-700 mb-4 italic">
-                "{review.text}"
+                &ldquo;{review.text}&rdquo;
               </p>
               
               <div className="border-t pt-4">

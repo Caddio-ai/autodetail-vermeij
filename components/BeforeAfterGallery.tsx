@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 
 const beforeAfterImages = [
   {
@@ -76,10 +77,11 @@ export function BeforeAfterGallery() {
               <div className="relative w-full h-full">
                 {/* Before Image */}
                 <div className="absolute inset-0">
-                  <img
+                  <Image
                     src={currentImage.before}
                     alt={`${currentImage.title} - Voor`}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 
@@ -88,10 +90,11 @@ export function BeforeAfterGallery() {
                   className="absolute inset-0 overflow-hidden"
                   style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
                 >
-                  <img
+                  <Image
                     src={currentImage.after}
                     alt={`${currentImage.title} - Na`}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 

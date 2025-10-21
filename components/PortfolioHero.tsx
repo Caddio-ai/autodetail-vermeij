@@ -34,7 +34,7 @@ export function PortfolioHero() {
               className="bg-white rounded-2xl p-6 shadow-lg"
             >
               <div className="text-3xl font-bold text-blue mb-2">500+</div>
-              <div className="text-sm text-gray-600">Auto's behandeld</div>
+              <div className="text-sm text-gray-600">Auto&apos;s behandeld</div>
             </motion.div>
             
             <motion.div

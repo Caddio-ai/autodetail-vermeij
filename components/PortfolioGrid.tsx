@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 
 const portfolioItems = [
   {
@@ -103,10 +104,11 @@ export function PortfolioGrid() {
             >
               <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <img
+                  <Image
                     src={item.after}
                     alt={item.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -157,10 +159,11 @@ export function PortfolioGrid() {
                 </button>
                 
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <img
+                  <Image
                     src={currentImageIndex === 0 ? selectedItem.before : selectedItem.after}
                     alt={selectedItem.title}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                   
                   <div className="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 rounded-lg text-sm">
