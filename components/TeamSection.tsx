@@ -5,11 +5,11 @@ import { Users, Award, Star } from 'lucide-react'
 
 const teamMembers = [
   {
-    name: 'Jan Vermeij',
+    name: 'Dex Vermeij',
     role: 'Eigenaar & Hoofd Detailing Specialist',
     experience: '8+ jaar ervaring',
     specialties: ['Lakcorrectie', 'Keramische Coating', 'Premium Detailing'],
-    description: 'Jan is de oprichter van Autodetail Vermeij en heeft jarenlange ervaring in premium autodetailing.',
+    description: 'Dex is de oprichter van Autodetail Vermeij en heeft jarenlange ervaring in premium autodetailing.',
   },
   {
     name: 'Lisa van der Berg',
