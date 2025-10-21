@@ -51,19 +51,24 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
         // Premium luxury automotive color palette
-        primary: '#0A84FF',
-        'primary-hover': '#0066CC',
+        'satin-black': '#000000',
+        dark: '#0D0E10',
+        accent: '#A1A1A1',
+        light: '#E8E9EB',
+        highlight: '#D4AF37',
+        // Legacy colors for compatibility
+        primary: '#D4AF37',
+        'primary-hover': '#B8860B',
         background: {
-          DEFAULT: '#F8F9FA',
-          dark: '#111315',
-          light: '#F8F9FA',
+          DEFAULT: '#E8E9EB',
+          dark: '#0D0E10',
+          light: '#E8E9EB',
         },
-        surface: '#1C1E21',
+        surface: '#A1A1A1',
         text: {
-          primary: '#E5E5E5',
-          secondary: '#B0B3B8',
+          primary: '#E8E9EB',
+          secondary: '#A1A1A1',
         },
-        accent: '#B5FF3B',
         destructive: '#FF4D4F',
       },
       borderRadius: {

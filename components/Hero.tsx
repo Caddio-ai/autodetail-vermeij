@@ -29,7 +29,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight tracking-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-light mb-6 leading-tight tracking-tight"
             >
               Uw auto verdient de{' '}
               <span className="text-gradient">beste zorg</span>
@@ -39,7 +39,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-lg md:text-xl text-white mb-8 max-w-3xl mx-auto leading-relaxed"
+              className="text-lg md:text-xl text-light mb-8 max-w-3xl mx-auto leading-relaxed"
             >
               Professionele autodetailing in Regio Gouda/Reeuwijk. 
               Lakcorrectie, keramische coating en premium interieur/exterieur behandeling.

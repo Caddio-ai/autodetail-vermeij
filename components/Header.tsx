@@ -20,13 +20,13 @@ export function Header() {
   const pathname = usePathname()
 
   return (
-    <header className="bg-background-dark/80 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
+    <header className="bg-dark/80 backdrop-blur-md border-b border-accent/20 sticky top-0 z-50">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="flex w-full items-center justify-between py-4">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <Car className="h-8 w-8 text-primary" />
-              <span className="text-xl font-heading font-semibold text-white">
+              <Car className="h-8 w-8 text-highlight" />
+              <span className="text-xl font-heading font-semibold text-light">
                 Autodetail Vermeij
               </span>
             </Link>
@@ -60,7 +60,7 @@ export function Header() {
           <div className="flex lg:hidden">
             <button
               type="button"
-              className="text-text-secondary hover:text-primary"
+              className="text-accent hover:text-highlight"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <span className="sr-only">Open menu</span>
@@ -84,8 +84,8 @@ export function Header() {
                   className={cn(
                     'block px-3 py-2 text-base font-medium transition-colors',
                     pathname === item.href
-                      ? 'text-primary bg-primary/10'
-                      : 'text-text-secondary hover:text-primary hover:bg-primary/5'
+                      ? 'text-highlight bg-highlight/10'
+                      : 'text-accent hover:text-highlight hover:bg-highlight/5'
                   )}
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -94,7 +94,7 @@ export function Header() {
               ))}
               <Link
                 href="/contact"
-                className="block px-3 py-2 text-base font-medium text-primary hover:bg-primary/10"
+                className="block px-3 py-2 text-base font-medium text-highlight hover:bg-highlight/10"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Offerte aanvragen
