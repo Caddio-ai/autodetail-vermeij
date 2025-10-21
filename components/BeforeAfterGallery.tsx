@@ -103,13 +103,13 @@ export function BeforeAfterGallery() {
                   className="absolute top-0 bottom-0 w-1 bg-blue shadow-lg cursor-ew-resize z-10"
                   style={{ left: `${sliderPosition}%` }}
                   onMouseDown={(e) => {
+                    const target = e.currentTarget as HTMLElement
+                    const rect = target.getBoundingClientRect()
+                    
                     const handleMouseMove = (e: MouseEvent) => {
-                      const rect = e.currentTarget?.getBoundingClientRect()
-                      if (rect) {
-                        const x = e.clientX - rect.left
-                        const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100))
-                        setSliderPosition(percentage)
-                      }
+                      const x = e.clientX - rect.left
+                      const percentage = Math.max(0, Math.min(100, (x / rect.width) * 100))
+                      setSliderPosition(percentage)
                     }
                     
                     const handleMouseUp = () => {
