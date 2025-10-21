@@ -20,13 +20,13 @@ export function Header() {
   const pathname = usePathname()
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-charcoal/95 backdrop-blur-md border-b border-gold/20 sticky top-0 z-50">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="flex w-full items-center justify-between py-4">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <Car className="h-8 w-8 text-blue" />
-              <span className="text-xl font-heading font-semibold text-charcoal">
+              <Car className="h-8 w-8 text-gold" />
+              <span className="text-xl font-heading font-semibold text-white">
                 Autodetail Vermeij
               </span>
             </Link>
@@ -39,10 +39,10 @@ export function Header() {
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  'text-sm font-medium transition-colors hover:text-blue',
+                  'text-sm font-medium transition-colors hover:text-gold',
                   pathname === item.href
-                    ? 'text-blue'
-                    : 'text-gray-700'
+                    ? 'text-gold'
+                    : 'text-silver'
                 )}
               >
                 {item.name}
@@ -60,7 +60,7 @@ export function Header() {
           <div className="flex lg:hidden">
             <button
               type="button"
-              className="text-gray-700 hover:text-blue"
+              className="text-silver hover:text-gold"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               <span className="sr-only">Open menu</span>
@@ -84,8 +84,8 @@ export function Header() {
                   className={cn(
                     'block px-3 py-2 text-base font-medium transition-colors',
                     pathname === item.href
-                      ? 'text-blue bg-blue/10'
-                      : 'text-gray-700 hover:text-blue hover:bg-gray-50'
+                      ? 'text-gold bg-gold/10'
+                      : 'text-silver hover:text-gold hover:bg-gold/5'
                   )}
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -94,7 +94,7 @@ export function Header() {
               ))}
               <Link
                 href="/contact"
-                className="block px-3 py-2 text-base font-medium text-blue hover:bg-blue/10"
+                className="block px-3 py-2 text-base font-medium text-gold hover:bg-gold/10"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Offerte aanvragen

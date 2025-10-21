@@ -62,11 +62,11 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-blue text-white px-6 py-3 rounded-xl font-medium hover:bg-blue/90 transition-colors duration-200;
+    @apply bg-gold text-charcoal px-8 py-4 rounded-lg font-semibold hover:bg-darkGold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
   }
   
   .btn-secondary {
-    @apply bg-metallic text-white px-6 py-3 rounded-xl font-medium hover:bg-metallic/90 transition-colors duration-200;
+    @apply bg-transparent border-2 border-gold text-gold px-8 py-4 rounded-lg font-semibold hover:bg-gold hover:text-charcoal transition-all duration-300 transform hover:scale-105;
   }
   
   .section-padding {
@@ -78,10 +78,22 @@
   }
   
   .gradient-bg {
-    @apply bg-gradient-to-br from-white via-gray-50 to-gray-100;
+    @apply bg-gradient-to-br from-charcoal via-metallic to-charcoal;
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-charcoal to-metallic bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-gold to-silver bg-clip-text text-transparent;
+  }
+  
+  .premium-card {
+    @apply bg-metallic/80 backdrop-blur-sm border border-gold/20 rounded-2xl shadow-2xl hover:shadow-gold/20 transition-all duration-300;
+  }
+  
+  .premium-text {
+    @apply text-silver;
+  }
+  
+  .premium-heading {
+    @apply text-white font-bold;
   }
 }

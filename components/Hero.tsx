@@ -7,11 +7,14 @@ import { Car, Star, Shield, Clock } from 'lucide-react'
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-white via-gray-50 to-gray-100 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-50">
-        <div className="w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmM2Y0ZjYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIxIi8+PC9nPjwvZz48L3N2Zz4=')] bg-repeat" />
+    <section className="relative min-h-screen flex items-center justify-center gradient-bg overflow-hidden">
+      {/* Premium Background Pattern */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNEMkFGMzciIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIxIi8+PC9nPjwvZz48L3N2Zz4=')] bg-repeat" />
       </div>
+      
+      {/* Premium Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-charcoal/90 via-transparent to-charcoal/90" />
       
       <div className="relative z-10 container-max section-padding">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -26,7 +29,7 @@ export function Hero() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center space-x-2 bg-blue/10 text-blue px-4 py-2 rounded-full text-sm font-medium mb-6"
+              className="inline-flex items-center space-x-2 bg-gold/20 text-gold px-6 py-3 rounded-full text-sm font-medium mb-6 border border-gold/30"
             >
               <Star className="h-4 w-4" />
               <span>Premium Autodetailing</span>
@@ -36,7 +39,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-charcoal mb-6 leading-tight"
+              className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold premium-heading mb-6 leading-tight"
             >
               Uw auto verdient de{' '}
               <span className="text-gradient">beste zorg</span>
@@ -46,7 +49,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl"
+              className="text-lg md:text-xl premium-text mb-8 max-w-2xl"
             >
               Professionele autodetailing in Regio Gouda/Reeuwijk. 
               Lakcorrectie, keramische coating en premium interieur/exterieur behandeling.
@@ -71,31 +74,31 @@ export function Hero() {
             </motion.div>
           </motion.div>
           
-          {/* Image/Visual */}
+          {/* Premium Visual */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative"
           >
-            <div className="relative bg-white rounded-2xl shadow-2xl p-8">
-              <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 rounded-xl flex items-center justify-center">
-                <Car className="h-32 w-32 text-blue/20" />
+            <div className="relative premium-card p-8">
+              <div className="aspect-[4/3] bg-gradient-to-br from-metallic to-charcoal rounded-xl flex items-center justify-center border border-gold/20">
+                <Car className="h-32 w-32 text-gold/40" />
               </div>
               
-              {/* Floating Cards */}
+              {/* Premium Floating Cards */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
-                className="absolute -top-4 -left-4 bg-white rounded-xl shadow-lg p-4 flex items-center space-x-3"
+                className="absolute -top-4 -left-4 premium-card p-4 flex items-center space-x-3"
               >
-                <div className="p-2 bg-green-100 rounded-lg">
-                  <Shield className="h-5 w-5 text-green-600" />
+                <div className="p-2 bg-gold/20 rounded-lg border border-gold/30">
+                  <Shield className="h-5 w-5 text-gold" />
                 </div>
                 <div>
-                  <div className="text-sm font-medium text-gray-900">Premium Kwaliteit</div>
-                  <div className="text-xs text-gray-500">5 jaar garantie</div>
+                  <div className="text-sm font-medium premium-heading">Premium Kwaliteit</div>
+                  <div className="text-xs premium-text">5 jaar garantie</div>
                 </div>
               </motion.div>
               
@@ -103,14 +106,14 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.0 }}
-                className="absolute -bottom-4 -right-4 bg-white rounded-xl shadow-lg p-4 flex items-center space-x-3"
+                className="absolute -bottom-4 -right-4 premium-card p-4 flex items-center space-x-3"
               >
-                <div className="p-2 bg-blue-100 rounded-lg">
-                  <Clock className="h-5 w-5 text-blue-600" />
+                <div className="p-2 bg-gold/20 rounded-lg border border-gold/30">
+                  <Clock className="h-5 w-5 text-gold" />
                 </div>
                 <div>
-                  <div className="text-sm font-medium text-gray-900">Snelle Service</div>
-                  <div className="text-xs text-gray-500">2-8 uur</div>
+                  <div className="text-sm font-medium premium-heading">Snelle Service</div>
+                  <div className="text-xs premium-text">2-8 uur</div>
                 </div>
               </motion.div>
             </div>
